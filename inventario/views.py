@@ -25,27 +25,24 @@ def login_view(request):
     return JsonResponse({"error": "Credenciales inválidas"}, status=403)
 
 @api_view(["POST"])
-@permission_classes([AllowAny])  # Permitir el acceso sin autenticación
+@permission_classes([AllowAny])
 def signup(request):
     username = request.data.get("username")
     password = request.data.get("password")
     email = request.data.get("email")
 
-    # Validar que los campos no estén vacíos
     if not username or not password or not email:
         return Response(
             {"error": "Todos los campos son obligatorios."},
             status=status.HTTP_400_BAD_REQUEST,
         )
 
-    # Validar si el nombre de usuario ya existe
     if User.objects.filter(username=username).exists():
         return Response(
             {"error": "El nombre de usuario ya está en uso."},
             status=status.HTTP_400_BAD_REQUEST,
         )
 
-    # Crear el usuario
     try:
         user = User.objects.create_user(username=username, email=email, password=password)
         return Response({"message": "Usuario registrado con éxito."}, status=status.HTTP_201_CREATED)
