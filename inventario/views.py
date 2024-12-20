@@ -7,8 +7,8 @@ from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 from rest_framework import status
 from django.contrib.auth.models import User
-from .serializer import CategoriaSerializer, ProductoSerializer, VentaSerializer, ProveedorSerializer
-from .models import Categoria, Producto, Proveedor, Venta
+from .serializer import CategoriaSerializer, ProductoSerializer, VentaSerializer
+from .models import Categoria, Producto, Venta
 
 
 # Create your views here.
@@ -67,10 +67,6 @@ class ProductoViewSet(ModelViewSet):
         productos = Producto.objects.filter(categoria_id=categoria_id)
         serializer = ProductoSerializer(productos, many=True)
         return Response(serializer.data)
-
-class ProveedorViewSet(ModelViewSet):
-    serializer_class = ProveedorSerializer
-    queryset = Proveedor.objects.all()
 
 class VentaViewSet(ModelViewSet):
     serializer_class = VentaSerializer
