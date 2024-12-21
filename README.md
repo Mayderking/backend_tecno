@@ -8,7 +8,7 @@ Este proyecto tiene como objetivo desarrollar una plataforma digital para la ven
 >[!Note]
 >Para cada función se abre un apartado especial.
 - **Categoria**: Creación de una categoria con nombre y descripción. Además, dicha categoria se puede editar u eliminar.
-- **Productos**: Se puede añadir un nuevo producto con nombre y cantidad al programa. Este producto tambien se puede editar o eliminar.
+- **Productos**: Se puede añadir un nuevo producto con nombre, cantidad  y categoria al programa. Este producto tambien se puede editar o eliminar.
 - **Ventas**: En la sección venta la opción crear despliega un formulario solicita mediante una lista desplegable que producto se quiere comprar, en otra casilla se encuentra la opción de cuántos de esos mismos productos se quiere comprar y automáticamente en la casilla total se define el precio de la compra.
 - **Usuarios**: Creación, de un usuario autenticado.
 ## Tecnologías
