@@ -4,6 +4,13 @@ Este proyecto tiene como objetivo desarrollar una plataforma digital para la ven
 
 ![python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![Django](https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white)
+## Características Principales
+>[!Note]
+>Para cada función se abre un apartado especial.
+- **Categoria**: Creación de una categoria con nombre y descripción. Además, dicha categoria se puede editar u eliminar.
+- **Productos**: Se puede añadir un nuevo producto con nombre y cantidad al programa. Este producto tambien se puede editar o eliminar.
+- **Ventas**: En la sección venta la opción crear despliega un formulario solicita mediante una lista desplegable que producto se quiere comprar, en otra casilla se encuentra la opción de cuántos de esos mismos productos se quiere comprar y automáticamente en la casilla total se define el precio de la compra.
+- **Usuarios**: Creación, de un usuario autenticado.
 ## Tecnologías
 
 - **Backend**: Python 3, Django, Django REST Framework
